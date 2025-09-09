@@ -1,7 +1,7 @@
 import { Facebook, Instagram, Twitter, Github, Mail, MapPin, Phone, Globe } from "lucide-react"
 
 const data = {
-  websiteLink: "https://bluemount.com",
+  websiteLink: "https://bluemount.xyz",
   twitterLink: "https://x.com/BMHL_foundation",
   services: {
     assetManagement: "/asset-management",

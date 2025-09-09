@@ -1058,7 +1058,7 @@ const PhotographyBanner: React.FC = () => {
               <p className="lexend tracking-widest">
                 Pioneering digital asset treasury solutions and comprehensive financial services for the next generation of wealth management
               </p>
-              <a href="https://bluemount.com" className="book-link">
+              <a href="https://bluemount.xyz" className="book-link">
                 <span className="linktext tracking-tighter text-3xl">Explore Our Services</span>
                 <span className="arrow">
                   <span></span>
@@ -1324,10 +1324,10 @@ const PhotographyBanner: React.FC = () => {
                 From asset management to credit services, securities trading to digital asset treasury - Bluemount Holdings provides comprehensive financial solutions across all business sectors.
               </p>
               <div className="cta-buttons">
-                <a href="https://bluemount.com" className="cta-button">
+                <a href="https://bluemount.xyz" className="cta-button">
                   Explore All Services
                 </a>
-                <a href="https://bluemount.com" className="cta-button secondary">
+                <a href="https://bluemount.xyz" className="cta-button secondary">
                   Contact Our Team
                 </a>
               </div>
