@@ -77,7 +77,7 @@ export default function Footer() {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.3;
-          background: #d33682;
+          background: #4846BE;
           filter: blur(140px);
           height: 60%;
           width: 50%;
@@ -131,7 +131,7 @@ export default function Footer() {
         .brand-icon {
           width: 50px;
           height: 50px;
-          background: #d33682;
+          background: #4846BE;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -173,13 +173,13 @@ export default function Footer() {
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #d33682;
+          color: #4846BE;
           text-decoration: none;
           transition: all 0.3s ease;
         }
 
         .social-link:hover {
-          background: #d33682;
+          background: #4846BE;
           color: #002b36;
           transform: translateY(-2px);
         }
@@ -195,7 +195,7 @@ export default function Footer() {
           font-family: "Lexend", sans-serif;
           font-weight: 700;
           font-size: 16px;
-          color: #d33682;
+          color: #4846BE;
           text-transform: uppercase;
           margin: 0 0 25px;
           letter-spacing: 1px;
@@ -235,7 +235,7 @@ export default function Footer() {
         .contact-icon {
           width: 20px;
           height: 20px;
-          color: #d33682;
+          color: #4846BE;
           flex-shrink: 0;
         }
 
@@ -257,7 +257,7 @@ export default function Footer() {
           position: absolute;
           width: 100%;
           height: 100%;
-          background: #d33682;
+          background: #4846BE;
           border-radius: 50%;
           animation: pulse 2s infinite;
         }
@@ -267,7 +267,7 @@ export default function Footer() {
           position: absolute;
           width: 100%;
           height: 100%;
-          background: #d33682;
+          background: #4846BE;
           border-radius: 50%;
         }
 
@@ -303,7 +303,7 @@ export default function Footer() {
         }
 
         .copyright a {
-          color: #d33682;
+          color: #4846BE;
           text-decoration: none;
           transition: color 0.3s ease;
         }

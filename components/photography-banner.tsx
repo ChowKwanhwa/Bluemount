@@ -44,7 +44,49 @@ const PhotographyBanner: React.FC = () => {
         /* Font faces */
         @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Roboto:wght@400&display=swap');
 
+        /* Navigation Header */
+        .navigation-header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: rgba(7, 54, 66, 0.95);
+          backdrop-filter: blur(10px);
+          z-index: 1000;
+          padding: 15px 30px;
+          border-bottom: 1px solid rgba(72, 70, 190, 0.2);
+        }
 
+        .nav-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .nav-logo {
+          width: 40px;
+          height: 40px;
+          background: #4846BE;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "Lexend", sans-serif;
+          font-weight: 700;
+          font-size: 16px;
+          color: #fff;
+        }
+
+        .nav-brand {
+          font-family: "Lexend", sans-serif;
+          font-weight: 700;
+          font-size: 18px;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
 
         /* Component styles */
         .photography-banner,
@@ -54,6 +96,7 @@ const PhotographyBanner: React.FC = () => {
         
         .photography-banner {
           margin: 0;
+          margin-top: 70px;
           background-color: #002b36;
           
           background-image: url("https://www.yudiz.com/codepen/photography-banner/frame.png");
@@ -86,7 +129,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.4;
-          background: #d33682;
+          background: #4846BE;
           filter: blur(162px);
           height: 35%;
           width: 55%;
@@ -103,21 +146,52 @@ const PhotographyBanner: React.FC = () => {
           overflow: hidden;
         }
 
+        .nasdaq-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: linear-gradient(135deg, #4846BE, #6366f1);
+          color: #fff;
+          padding: 8px 16px;
+          border-radius: 25px;
+          font-family: "Lexend", sans-serif;
+          font-weight: 600;
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 20px;
+          box-shadow: 0 4px 15px rgba(72, 70, 190, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .nasdaq-icon {
+          width: 20px;
+          height: 20px;
+          background: #fff;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          color: #4846BE;
+        }
+
         .left-part h1 {
           margin: 0;
           color: #fff;
           font-family: "Lexend", sans-serif;
           font-weight: 700;
-          font-size: clamp(48px, 12vw, 160px);
-          line-height: 0.75;
+          font-size: clamp(32px, 8vw, 100px);
+          line-height: 0.8;
           font-style: normal;
           text-transform: uppercase;
         }
 
         .left-part h1 .text {
-          color: #d33682;
+          color: #4846BE;
           display: block;
-          height: clamp(100px, 15vw, 120px);
+          height: clamp(70px, 10vw, 90px);
         }
 
         .left-part h1 .d-flex {
@@ -214,7 +288,7 @@ const PhotographyBanner: React.FC = () => {
         .book-link .arrow::after {
           position: absolute;
           content: "";
-          background-color: #d33682;
+          background-color: #4846BE;
           transition: all ease-in-out 0.35s;
           transform-origin: 0 0;
           border-radius: 30px;
@@ -243,7 +317,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .book-link .arrow span {
-          background-color: #d33682;
+          background-color: #4846BE;
           height: 2px;
           width: 100%;
           display: inline-block;
@@ -258,7 +332,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .book-link .arrow span::before {
-          background-color: #d33682;
+          background-color: #4846BE;
           content: "";
           height: 100%;
           width: 15px;
@@ -284,7 +358,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.4;
-          background: #d33682;
+          background: #4846BE;
           filter: blur(112px);
           height: 35%;
           width: 55%;
@@ -517,7 +591,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.3;
-          background: #d33682;
+          background: #4846BE;
           filter: blur(140px);
           height: 40%;
           width: 40%;
@@ -547,7 +621,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .features-content h2 .highlight {
-          color: #d33682;
+          color: #4846BE;
         }
 
         .features-list {
@@ -567,7 +641,7 @@ const PhotographyBanner: React.FC = () => {
         .feature-icon {
           width: 50px;
           height: 50px;
-          background: #d33682;
+          background: #4846BE;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -606,7 +680,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.4;
-          background: #d33682;
+          background: #4846BE;
           filter: blur(120px);
           height: 50%;
           width: 30%;
@@ -686,7 +760,7 @@ const PhotographyBanner: React.FC = () => {
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background: #d33682;
+          background: #4846BE;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -721,7 +795,7 @@ const PhotographyBanner: React.FC = () => {
           content: "";
           border-radius: 197.5px 0px;
           opacity: 0.6;
-          background: #d33682;
+          background: #4846BE;
           filter: blur(180px);
           height: 60%;
           width: 80%;
@@ -748,7 +822,7 @@ const PhotographyBanner: React.FC = () => {
         }
 
         .cta-subtitle {
-          color: #d33682;
+          color: #4846BE;
           font-family: "lexend";
           font-size: 26px;
           line-height: 1.6;
@@ -767,7 +841,7 @@ const PhotographyBanner: React.FC = () => {
 
         .cta-button {
           padding: 18px 40px;
-          background: #d33682;
+          background: #4846BE;
           color: #002b36;
           text-decoration: none;
           font-family: "lexend";
@@ -776,12 +850,12 @@ const PhotographyBanner: React.FC = () => {
           text-transform: uppercase;
           border-radius: 50px;
           transition: all 0.3s ease;
-          border: 2px solid #d33682;
+          border: 2px solid #4846BE;
         }
 
         .cta-button:hover {
           background: transparent;
-          color: #d33682;
+          color: #4846BE;
         }
 
         .cta-button.secondary {
@@ -792,8 +866,8 @@ const PhotographyBanner: React.FC = () => {
 
         .cta-button.secondary:hover {
           background: transparent;
-          color: #d33682;
-          border: 2px solid #d33682;
+          color: #4846BE;
+          border: 2px solid #4846BE;
         }
 
         /* Services Section Styles */
@@ -833,14 +907,14 @@ const PhotographyBanner: React.FC = () => {
 
         .service-card:hover {
           background: rgba(211, 54, 130, 0.1);
-          border-color: #d33682;
+          border-color: #4846BE;
           transform: translateY(-5px);
         }
 
         .service-icon {
           width: 60px;
           height: 60px;
-          background: #d33682;
+          background: #4846BE;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -880,7 +954,7 @@ const PhotographyBanner: React.FC = () => {
         .service-features li {
           font-family: "lexend";
           font-size: 14px;
-          color: #d33682;
+          color: #4846BE;
           margin-bottom: 8px;
           padding-left: 20px;
           position: relative;
@@ -890,7 +964,7 @@ const PhotographyBanner: React.FC = () => {
           content: "✓";
           position: absolute;
           left: 0;
-          color: #d33682;
+          color: #4846BE;
           font-weight: bold;
         }
 
@@ -956,6 +1030,10 @@ const PhotographyBanner: React.FC = () => {
         <main>
           <section className="info-section">
             <div className="left-part">
+              <div className="nasdaq-badge">
+                <div className="nasdaq-icon">$</div>
+                <span>NASDAQ Listed</span>
+              </div>
               <h1>
                 <span className="d-flex">
                   {["B", "L", "U", "E", "M", "O", "U", "N", "T"].map((char, index) => (
@@ -1246,6 +1324,14 @@ const PhotographyBanner: React.FC = () => {
           </section>
         </main>
       </div>
+
+      {/* Navigation Header */}
+      <header className="navigation-header">
+        <div className="nav-container">
+          <div className="nav-logo">BM</div>
+          <div className="nav-brand">Bluemount Holdings</div>
+        </div>
+      </header>
     </>
   )
 }
