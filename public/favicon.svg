@@ -1,4 +1,6 @@
-<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" fill="#073642" rx="4"/>
-  <text x="16" y="22" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#4846BE">BM</text>
+<svg width="32" height="32" viewBox="0 0 486 330" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#ffffff" rx="4"/>
+  <g transform="scale(0.066) translate(0, 0)">
+    <path fill="#5C52FB" d="M-519.24,197.16h18.56c4.68,0,8.36,1.14,11.05,3.41c2.69,2.27,4.03,5.16,4.03,8.66c0,5.12-2.97,8.55-8.92,10.3c3.02,0.44,5.43,1.74,7.25,3.9c1.81,2.16,2.72,4.67,2.72,7.51c0,3.59-1.36,6.48-4.07,8.69c-2.71,2.21-6.38,3.31-11.02,3.31h-19.61V197.16z"/>
+  </g>
 </svg>

@@ -7,8 +7,24 @@ const PhotographyBanner: React.FC = () => {
   const [currentText, setCurrentText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   const texts = ["EMPOWERS", "DELIVERS"]
+
+  // Generate consistent particle data
+  const particleData = Array.from({ length: 20 }, (_, i) => ({
+    id: i,
+    width: 4 + (i * 7) % 8,
+    height: 4 + (i * 5) % 8,
+    left: (i * 13) % 100,
+    top: (i * 17) % 100,
+    duration: 15 + (i * 3) % 20,
+    delay: (i * 2) % 10,
+  }))
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 40 : 100
@@ -44,42 +60,29 @@ const PhotographyBanner: React.FC = () => {
         /* Font faces */
         @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Roboto:wght@400&display=swap');
 
-        /* Navigation Header */
-        .navigation-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          background: rgba(7, 54, 66, 0.95);
-          backdrop-filter: blur(10px);
-          z-index: 1000;
-          padding: 15px 30px;
-          border-bottom: 1px solid rgba(72, 70, 190, 0.2);
-        }
-
-        .nav-container {
-          max-width: 1200px;
-          margin: 0 auto;
+        /* Company branding in hero section */
+        .company-branding {
           display: flex;
           align-items: center;
           gap: 15px;
+          margin-bottom: 30px;
         }
 
-        .nav-logo {
-          width: 40px;
-          height: 40px;
-          background: #4846BE;
-          border-radius: 8px;
+        .company-logo {
+          width: 120px;
+          height: 120px;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: "Lexend", sans-serif;
-          font-weight: 700;
-          font-size: 16px;
-          color: #fff;
         }
 
-        .nav-brand {
+        .company-logo img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        .company-name {
           font-family: "Lexend", sans-serif;
           font-weight: 700;
           font-size: 18px;
@@ -96,7 +99,6 @@ const PhotographyBanner: React.FC = () => {
         
         .photography-banner {
           margin: 0;
-          margin-top: 70px;
           background-color: #002b36;
           
           background-image: url("https://www.yudiz.com/codepen/photography-banner/frame.png");
@@ -815,21 +817,26 @@ const PhotographyBanner: React.FC = () => {
           color: #fff;
           font-family: "Lexend", sans-serif;
           font-weight: 700;
-          font-size: clamp(80px, 12vw, 160px);
-          line-height: 0.8;
+          font-size: clamp(28px, 8vw, 80px);
+          line-height: 1.1;
           margin: 0 0 30px;
           text-transform: uppercase;
+          word-wrap: break-word;
+          hyphens: auto;
+          text-align: center;
         }
 
         .cta-subtitle {
           color: #4846BE;
           font-family: "lexend";
-          font-size: 26px;
+          font-size: clamp(16px, 4vw, 26px);
           line-height: 1.6;
           margin: 0 0 50px;
           max-width: 600px;
           margin-left: auto;
           margin-right: auto;
+          text-align: center;
+          padding: 0 20px;
         }
 
         .cta-buttons {
@@ -1026,24 +1033,28 @@ const PhotographyBanner: React.FC = () => {
         }
       `}</style>
 
-      <div className="photography-banner">
-        <main>
-          <section className="info-section">
-            <div className="left-part">
-              <div className="nasdaq-badge">
-                <div className="nasdaq-icon">$</div>
-                <span>NASDAQ Listed</span>
-              </div>
-              <h1>
-                <span className="d-flex">
-                  {["B", "L", "U", "E", "M", "O", "U", "N", "T"].map((char, index) => (
-                    <span key={index} className="char tracking-tighter" style={{ animationDelay: `${index * 0.08}s` }}>
-                      {char === " " ? "\u00A0" : char}
+          <div className="photography-banner">
+            <main>
+              <section className="info-section">
+                <div className="left-part">
+                  <div className="company-branding">
+                    <div className="company-logo"><img src="/Logo.svg" alt="Bluemount Holdings Logo" /></div>
+                    <div className="company-name">Bluemount Holdings</div>
+                  </div>
+                  <div className="nasdaq-badge">
+                    <div className="nasdaq-icon">$</div>
+                    NASDAQ Listed
+                  </div>
+                  <h1>
+                    <span className="d-flex">
+                      {"BLUEMOUNT".split("").map((char, index) => (
+                        <span key={index} className="char">
+                          {char === " " ? "\u00A0" : char}
+                        </span>
+                      ))}
                     </span>
-                  ))}
-                </span>
-                <span className="text tracking-tighter">{currentText}</span>
-              </h1>
+                    <span className="text tracking-tighter">{currentText}</span>
+                  </h1>
               <p className="lexend tracking-widest">
                 Pioneering digital asset treasury solutions and comprehensive financial services for the next generation of wealth management
               </p>
@@ -1057,17 +1068,17 @@ const PhotographyBanner: React.FC = () => {
             <div className="right-part">
               <img src="/images/ai-startup.png" alt="AI Startup" className="hero-image" />
               <div className="particles-container">
-                {Array.from({ length: 20 }, (_, i) => (
+                {isClient && particleData.map((particle) => (
                   <div
-                    key={i}
+                    key={particle.id}
                     className="particle"
                     style={{
-                      width: `${Math.random() * 8 + 4}px`,
-                      height: `${Math.random() * 8 + 4}px`,
-                      left: `${Math.random() * 100}%`,
-                      top: `${Math.random() * 100}%`,
-                      animationDuration: `${Math.random() * 20 + 15}s`,
-                      animationDelay: `${Math.random() * 10}s`,
+                      width: `${particle.width}px`,
+                      height: `${particle.height}px`,
+                      left: `${particle.left}%`,
+                      top: `${particle.top}%`,
+                      animationDuration: `${particle.duration}s`,
+                      animationDelay: `${particle.delay}s`,
                     }}
                   />
                 ))}
@@ -1325,13 +1336,6 @@ const PhotographyBanner: React.FC = () => {
         </main>
       </div>
 
-      {/* Navigation Header */}
-      <header className="navigation-header">
-        <div className="nav-container">
-          <div className="nav-logo">BM</div>
-          <div className="nav-brand">Bluemount Holdings</div>
-        </div>
-      </header>
     </>
   )
 }
