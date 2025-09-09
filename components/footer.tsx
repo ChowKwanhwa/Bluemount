@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Github, Mail, MapPin, Phone, Globe } from "lucide-react"
+import { Facebook, Instagram, Twitter, Github, Mail, MapPin, Globe } from "lucide-react"
 
 const data = {
   websiteLink: "https://bluemount.xyz",
@@ -21,9 +21,8 @@ const data = {
     forms: "/client-forms",
   },
   contact: {
-    email: "cs@bluemount.com",
-    phone: "+852 2137 2688",
-    address: "Room 1007, 10/F, Capital Centre, 151 Gloucester Road, Wan Chai, Hong Kong",
+    email: "cs@bluemount.xyz",
+    address: "1875 Century Park East, Suite 1200, Los Angeles, CA 90067, United States",
   },
   company: {
     name: "Bluemount Holdings",
@@ -59,7 +58,6 @@ const helpfulLinks = [
 
 const contactInfo = [
   { icon: Mail, text: data.contact.email },
-  { icon: Phone, text: data.contact.phone },
   { icon: MapPin, text: data.contact.address, isAddress: true },
 ]
 
