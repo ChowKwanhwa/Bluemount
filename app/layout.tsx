@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Bluemount Holdings | Digital Asset Treasury & Financial Services',
     description: 'Pioneering digital asset treasury solutions and comprehensive financial services for the next generation of wealth management across Asia-Pacific markets.',
-    creator: '@BMHL_foundation',
+    creator: '@BMFxyz',
   },
   robots: {
     index: true,
