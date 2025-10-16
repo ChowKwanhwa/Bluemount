@@ -429,7 +429,7 @@ export default function Footer() {
               <div className="social-links">
                 {socialLinks.map(({ icon: Icon, label, href }) => (
                   <div key={label} className="social-link-wrapper">
-                    <a href={href} className="social-link" aria-label={label}>
+                    <a href={href} className="social-link" aria-label={label} target="_blank" rel="noopener noreferrer">
                       <Icon size={20} />
                     </a>
                     <span className="social-label">{label}</span>
