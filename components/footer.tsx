@@ -174,7 +174,14 @@ export default function Footer() {
 
         .social-links {
           display: flex;
-          gap: 20px;
+          gap: 30px;
+        }
+
+        .social-link-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
         }
 
         .social-link {
@@ -195,6 +202,14 @@ export default function Footer() {
           background: #4846BE;
           color: #002b36;
           transform: translateY(-2px);
+        }
+
+        .social-label {
+          font-family: "Lexend";
+          font-size: 12px;
+          color: #aaa;
+          text-align: center;
+          white-space: nowrap;
         }
 
         .footer-links {
@@ -413,9 +428,12 @@ export default function Footer() {
               <p className="brand-description">{data.company.description}</p>
               <div className="social-links">
                 {socialLinks.map(({ icon: Icon, label, href }) => (
-                  <a key={label} href={href} className="social-link" aria-label={label}>
-                    <Icon size={20} />
-                  </a>
+                  <div key={label} className="social-link-wrapper">
+                    <a href={href} className="social-link" aria-label={label}>
+                      <Icon size={20} />
+                    </a>
+                    <span className="social-label">{label}</span>
+                  </div>
                 ))}
               </div>
             </div>
